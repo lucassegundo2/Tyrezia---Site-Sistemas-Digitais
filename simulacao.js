@@ -12,16 +12,26 @@ const distDirSpan = document.getElementById("dist-dir");
 // ÁUDIO (BEEP) — LIBERADO APÓS O PRIMEIRO CLIQUE
 // -------------------------------
 
-let beep = new Audio("beep.mp3");
-beep.volume = 1;
+// Gerador de beep igual ao Arduino tone()
+function gerarBeep(frequencia = 800, duracao = 100) {
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
 
-// IMPORTANTE: desbloqueia o áudio quando o usuário clicar 1 vez na página
-document.body.addEventListener("click", () => {
-  beep.play().then(() => {
-    beep.pause();
-    beep.currentTime = 0;
-  });
-}, { once: true });
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscillator.type = "square";
+  oscillator.frequency.value = frequencia;
+
+  gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime); // volume
+
+  oscillator.start();
+  setTimeout(() => {
+    oscillator.stop();
+    audioCtx.close();
+  }, duracao);
+}
 
 // -------------------------------
 // INTERVALOS DOS BEEPS
@@ -44,33 +54,26 @@ function calcularDistancia(x1, x2) {
 // -------------------------------
 
 function tocarBeep(distancia, lado) {
-
-  // Calcula a velocidade — mais perto → beep mais rápido
-  const velocidade = Math.max(60, distancia * 10);
+  const velocidade = Math.max(70, distancia * 10); // mais perto → mais rápido
 
   if (lado === "esq") {
     clearInterval(intervaloEsq);
-
     if (distancia < 100) {
       intervaloEsq = setInterval(() => {
-        beep.currentTime = 0;
-        beep.play();
+        gerarBeep(1000, 80); // som mais agudo
       }, velocidade);
     }
   }
 
   if (lado === "dir") {
     clearInterval(intervaloDir);
-
     if (distancia < 100) {
       intervaloDir = setInterval(() => {
-        beep.currentTime = 0;
-        beep.play();
+        gerarBeep(700, 80); // som mais grave
       }, velocidade);
     }
   }
 }
-
 // -------------------------------
 // MOVIMENTO DO OBJETO (SIMULA O OBSTÁCULO)
 // -------------------------------
@@ -117,3 +120,4 @@ objeto.addEventListener("mousedown", () => {
 document.addEventListener("mouseup", () => {
   document.onmousemove = null;
 });
+
