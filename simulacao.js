@@ -1,18 +1,9 @@
-// -------------------------------
-// ELEMENTOS DA INTERFACE
-// -------------------------------
-
 const objeto = document.getElementById("objeto");
 const sensorEsq = document.getElementById("sensor-esq");
 const sensorDir = document.getElementById("sensor-dir");
 const distEsqSpan = document.getElementById("dist-esq");
 const distDirSpan = document.getElementById("dist-dir");
 
-// -------------------------------
-// ÁUDIO (BEEP) — LIBERADO APÓS O PRIMEIRO CLIQUE
-// -------------------------------
-
-// Gerador de beep igual ao Arduino tone()
 function gerarBeep(frequencia = 800, duracao = 100) {
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   const oscillator = audioCtx.createOscillator();
@@ -24,7 +15,7 @@ function gerarBeep(frequencia = 800, duracao = 100) {
   oscillator.type = "square";
   oscillator.frequency.value = frequencia;
 
-  gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime); // volume
+  gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime); 
 
   oscillator.start();
   setTimeout(() => {
@@ -33,34 +24,21 @@ function gerarBeep(frequencia = 800, duracao = 100) {
   }, duracao);
 }
 
-// -------------------------------
-// INTERVALOS DOS BEEPS
-// -------------------------------
-
 let intervaloEsq = null;
 let intervaloDir = null;
 
-// -------------------------------
-// FUNÇÃO DE DISTÂNCIA
-// -------------------------------
-
 function calcularDistancia(x1, x2) {
   const distPx = Math.abs(x1 - x2);
-  return Math.floor(distPx / 5);  // Escala px → cm
+  return Math.floor(distPx / 5);  
 }
 
-// -------------------------------
-// FUNÇÃO QUE CONTROLA O BEEEP
-// -------------------------------
-
 function tocarBeep(distancia, lado) {
-  const velocidade = Math.max(70, distancia * 10); // mais perto → mais rápido
-
+  const velocidade = Math.max(70, distancia * 10); 
   if (lado === "esq") {
     clearInterval(intervaloEsq);
     if (distancia < 100) {
       intervaloEsq = setInterval(() => {
-        gerarBeep(1000, 80); // som mais agudo
+        gerarBeep(1000, 80); 
       }, velocidade);
     }
   }
@@ -69,14 +47,11 @@ function tocarBeep(distancia, lado) {
     clearInterval(intervaloDir);
     if (distancia < 100) {
       intervaloDir = setInterval(() => {
-        gerarBeep(700, 80); // som mais grave
+        gerarBeep(700, 80);
       }, velocidade);
     }
   }
 }
-// -------------------------------
-// MOVIMENTO DO OBJETO (SIMULA O OBSTÁCULO)
-// -------------------------------
 
 objeto.addEventListener("mousedown", () => {
 
@@ -88,17 +63,15 @@ objeto.addEventListener("mousedown", () => {
     let x = event.clientX - rect.left - 20;
     let y = event.clientY - rect.top - 20;
 
-    // Mantém dentro da área
     x = Math.max(0, Math.min(x, rect.width - 40));
     y = Math.max(0, Math.min(y, rect.height - 40));
 
     objeto.style.left = x + "px";
     objeto.style.top = y + "px";
 
-    // Distância horizontal entre objeto e sensores
     const sensorEsqX = sensorEsq.offsetLeft + sensorEsq.offsetWidth / 2;
     const sensorDirX = sensorDir.offsetLeft + sensorDir.offsetWidth / 2;
-    const objetoX = x + 20; // centro do objeto
+    const objetoX = x + 20;
 
     const distEsq = calcularDistancia(objetoX, sensorEsqX);
     const distDir = calcularDistancia(objetoX, sensorDirX);
@@ -113,11 +86,8 @@ objeto.addEventListener("mousedown", () => {
 
 });
 
-// -------------------------------
-// PARAR MOVIMENTO AO SOLTAR O MOUSE
-// -------------------------------
-
 document.addEventListener("mouseup", () => {
   document.onmousemove = null;
 });
+
 
