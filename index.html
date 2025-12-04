@@ -10,7 +10,10 @@
 <body>
   <header>
     <nav class="navbar-mobile nav">
-      <img src="Group 1.png" alt="Logo Tyrezia" class="logo">
+      <a href="Grey Minimalist Gradient Creative Portfolio Presentation.pdf" download>
+        <img src="Group 1.png" alt="Logo Tyrezia" class="logo">
+      </a>
+
 
       <ul class="nav-links">
         <li><a href="#menu">Início</a></li>
@@ -89,8 +92,8 @@
   <h2 class="title-simulacao">SIMULAÇÃO DO FUNCIONAMENTO</h2>
 
   <p class="sim-info">
-    Arraste a bolioha e veja como os sensores respondem com distâncias e beeps, 
-    simulando o comportamento do óculos Tyrezia.
+    Arraste o objeto roxo e veja como os sensores respondem com distâncias e beeps, 
+    simulando fielmente o comportamento do óculos Tyrezia.
   </p>
 
   <div id="simulador-area">
@@ -134,6 +137,15 @@
 </section>
   
   </main>
+  <script>
+document.getElementById("logo-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector("#canvas-modelagem").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+</script>
+
 </body>
 </html>
 
