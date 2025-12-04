@@ -19,8 +19,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-main);
   background: var(--bg1);
+  
+  background-image: url('Vector\ 17\ \(1\).png');
+  background-repeat: repeat; 
 }
-
 header {
   width: 100%;
   padding: 20px 30px;
@@ -115,6 +117,7 @@ header {
   padding: 25px 30px;
   border-radius: 16px;
   line-height: 1.6;
+  background-image: url('Vector\ 17\ \(1\).png');
 }
 
 .maker-container p {
@@ -182,6 +185,7 @@ header {
   border-radius: 20px;
   text-align: center;
   flex-shrink: 0;
+  background-image: url('Vector\ 17\ \(1\).png');
 }
 
 .foto-membro {
@@ -224,13 +228,14 @@ header {
 #processo {
   padding: 80px 20px;
   background: #2d0038; 
+  background-image: url('prototipação.png');
 }
 
 .title-processo {
   text-align: center;
   font-size: 48px;
   font-weight: 800;
-  color: var(--teal);
+  color: #4AFFBC;
   margin-bottom: 50px;
 }
 
@@ -296,7 +301,7 @@ header {
 
 .video-projeto:hover {
   transform: scale(1.05);
-  border-color: var(--teal);
+  border-color: var(--teal); 
 }
 
 .foto-projeto {
@@ -304,7 +309,7 @@ header {
   height: 240px;
   object-fit: cover;
   border-radius: 20px;
-  border: 3px solid #4a025c;
+  border: 3px solid #4a025c; 
 }
 
 .foto-projeto:hover {
@@ -331,11 +336,11 @@ header {
 header {
   position: sticky;
   top: 0;
-  z-index: 9999; 
+  z-index: 9999;
 }
 
 section {
-  scroll-margin-top: 120px; 
+  scroll-margin-top: 120px;
 }
 
 #simulacao {
@@ -366,6 +371,7 @@ section {
   margin: auto;
   position: relative;
   background: #2d0038;
+  background-image: url('Vector\ 17\ \(4\).png');
 }
 
 .sensor {
@@ -412,4 +418,3 @@ section {
   color: var(--teal);
   font-weight: 700;
 }
-
