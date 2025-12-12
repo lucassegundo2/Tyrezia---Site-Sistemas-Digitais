@@ -10,16 +10,21 @@
 <body>
   <header>
     <nav class="navbar-mobile nav">
-      <a href="Grey Minimalist Gradient Creative Portfolio Presentation.pdf">
+      <a href="Grey Minimalist Gradient Creative Portfolio Presentation.pdf" download>
         <img src="Group 1.png" alt="Logo Tyrezia" class="logo">
       </a>
 
 
       <ul class="nav-links">
         <li><a href="#menu">Início</a></li>
-        <li><a href="#Funcionalidades">Como funciona</a></li>
-        <li><a href="#processo">Processo</a></li>
+        <li><a href="#Funcionalidades">Como Funciona</a></li>
+        <li><a href="#componentes">Componentes</a></li> 
+        <li><a href="#aplicativos">Apps & Plataformas</a></li> 
+        <li><a href="#passo-a-passo">Montagem</a></li>
+        <li><a href="#codigo">Código</a></li>
         <li><a href="#simulacao">Simulação</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#desafios">Desafios</a></li>
         <li><a href="#equipe">Equipe</a></li>
       </ul>
     </nav>
@@ -33,61 +38,130 @@
         <img src="cego2 (1).png" alt="Criança cega, utilizando os óculos da tyrezia" class="tyrezia-image">
       </div>
     </section>
+
     <section id="Funcionalidades">
-        <h2 class="titlepk">Como funciona</h2>
-        <div class="maker-container">
+      <h2 class="titlepk">COMO FUNCIONA</h2>
+      <div class="maker-container">
 
         <p>
-            O Tyrezia é um óculos assistivo desenvolvido para ampliar a percepção espacial de pessoas com deficiência visual.
-            Ele utiliza dois sensores ultrassônicos — um do lado esquerdo e outro do lado direito — que detectam a presença de
-            obstáculos por meio de ondas sonoras de alta frequência.
+            O Tyrezia é um óculos assistivo desenvolvido para ampliar a percepção espacial de pessoas cegas ou com baixa visão.
             <br><br>
-
-            Cada sensor mede a distância até objetos e envia essas informações para um buzzer correspondente. Assim, o usuário
-            recebe avisos sonoros independentes para cada lado, permitindo identificar claramente de onde o obstáculo está vindo.
+            Motivação: Pessoas cegas enfrentam obstáculos que não são detectados pela bengala tradicional, e soluções assistivas avançadas tendem a ser caras e inacessíveis. Nosso objetivo é fornecer um dispositivo simples, intuitivo e de baixo custo que aumente a autonomia e a segurança.
             <br><br>
-
-            Quanto mais perto o objeto estiver, <strong>mais rápido o alerta sonoro é emitido</strong>. Esse comportamento cria
-            uma espécie de "radar auditivo", facilitando a navegação segura em ambientes internos e externos.
+            Objetivo: Criar um dispositivo vestível com sensores ultrassônicos que forneça feedback sonoro direcional, permitindo que o usuário perceba o ambiente em tempo real sem precisar tocar nos obstáculos.
             <br><br>
-
-            • Sensor esquerdo → Buzzer esquerdo<br>
-            • Sensor direito → Buzzer direito<br><br>
-
-            Os sinais seguem uma lógica simples e intuitiva:
-            <br><br>
-            — Distâncias acima de 1 metro: silencioso (área segura)<br>
-            — Entre 100 cm e 40 cm: alertas mais espaçados<br>
-            — Abaixo de 40 cm: alertas rápidos e constantes<br><br>
-
-            Essa combinação de leitura ultrassônica + retorno sonoro cria uma experiência acessível e natural para o usuário,
-            permitindo que ele perceba o ambiente em tempo real sem precisar tocar nos obstáculos.
-            <br><br>
-
-            O Tyrezia é leve, utiliza componentes de baixo custo e foi projetado para ser uma solução prática, intuitiva e
-            acessível para melhorar a autonomia de pessoas cegas ou com baixa visão.
+            Contextualização: O Tyrezia utiliza componentes de baixo custo (Arduino, sensores HC-SR04 e buzzers) e foi projetado para ser uma solução prática, intuitiva e acessível para melhorar a autonomia de pessoas cegas ou com baixa visão.
         </p>
-
         
+        <p>
+          Palavras-chave: Assistência Visual, Ultrassônico, Navegação, Acessibilidade, Baixo Custo.
+        </p>
       </div>
     </section>
-    <section id="processo">
-  <h2 class="title-processo">PROCESSO DE DESENVOLVIMENTO</h2>
+    
+    <section id="componentes">
+      <h2 class="title-componentes">COMPONENTES UTILIZADOS</h2>
+      <div class="maker-container">
+        <p>Lista dos componentes de hardware essenciais para a montagem do Tyrezia:</p>
+        <ul>
+          <li>Microcontrolador Arduino UNO: Placa principal para processamento e controle.</li>
+          <li>Sensor Ultrassônico HC-SR04 (x2): Usado para medir a distância até os obstáculos (esquerdo e direito).</li>
+          <li>Buzzer (x2): Componente de saída sonora que emite o bipe com frequência variável.</li>
+          <li>Fios Jumper e Protoboard: Para conexões e montagem temporária do circuito.</li>
+          <li>Estrutura de Óculos: Estrutura física para fixar os sensores e buzzers, tornando o dispositivo vestível.</li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="video-container">
-    <video controls class="video-projeto">
-      <source src="teste_sensor_compacto.mp4" type="video/mp4" />
-      Seu navegador não suporta vídeos.
-    </video>
-  </div>
+    <section id="aplicativos">
+      <h2 class="title-aplicativos">APLICATIVOS E PLATAFORMAS</h2>
+      <div class="maker-container">
+        <p>Ferramentas utilizadas no desenvolvimento do projeto:</p>
+        <ul>
+          <li>Arduino IDE (v1.8.19): Para escrita e upload do código para o Arduino.</li>
+          <li>Figma (Web): Para a criação do logo conceitual e vetorização.</li>
+          <li>VS Code (v1.84): Editor de código para o site (HTML/CSS/JS).</li>
+          <li>Tinkercad (Web): Para simulação digital do circuito e teste de lógica.</li>
+          <li>GitHub (Web): Repositório de código.</li>
+          <li>Vercel (Web): Plataforma de deploy para o site.</li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="fotos-container">
-    <img src="montagem.png" alt="Montagem do circuito" class="foto-projeto">
-    <img src="prototipação.png" alt="Prototipagem do óculos" class="foto-projeto">
-    <img src="verificacao_codigo.png" alt="Teste do código" class="foto-projeto">
-    <img src="Óculos para Deficientes Visuais _ AV2 Sistemas digitais.png" alt="Código em funcionamento no Tinkercad" class="foto-projeto">
-  </div>
-</section>
+    <section id="passo-a-passo">
+      <h2 class="title-passo-a-passo">PASSO A PASSO DA MONTAGEM</h2>
+      <div class="maker-container">
+        <div class="passo">
+            <h3>Passo 1: Conexão do Sensor Ultrassônico Esquerdo</h3>
+            <p>Conecte o VCC (pino de alimentação) do sensor à porta 5V do Arduino e o GND (terra) ao GND do Arduino. O pino Trigger (emissão) deve ser conectado à porta digital 9 e o Echo (recepção) à porta digital 8.</p>
+            
+        </div>
+
+        <div class="passo">
+            <h3>Passo 2: Conexão do Sensor Ultrassônico Direito</h3>
+            <p>Repita a conexão para o segundo sensor. O Trigger deve ser conectado à porta digital 7 e o Echo à porta digital 6.</p>
+        </div>
+        
+        <div class="passo">
+            <h3>Passo 3: Conexão dos Buzzers</h3>
+            <p>Conecte o pino positivo de cada Buzzer a uma porta digital PWM do Arduino (ex: porta 11 para o esquerdo e porta 10 para o direito) e o pino negativo ao GND. O uso de portas PWM é crucial para controlar a frequência do som.</p>
+        </div>
+
+        <div class="passo">
+            <h3>Passo 4: Montagem na Estrutura</h3>
+            <p>Fixe os sensores ultrassônicos na parte frontal da armação dos óculos, apontando para frente. Os Buzzers devem ser fixados nas hastes laterais, próximos aos ouvidos do usuário. O Arduino e a bateria podem ser fixados em uma caixa leve para ser levada no pescoço ou no bolso.</p>
+            
+        </div>
+
+      </div>
+    </section>
+
+    <section id="codigo">
+      <h2 class="title-codigo">CÓDIGO</h2>
+      <div class="maker-container">
+
+        <h3>Trecho de Código Essencial (Leitura do Sensor):</h3>
+        <p>A função principal para calcular a distância e ajustar o feedback sonoro.</p>
+        <pre>
+          <code>
+// Função para medir a distância em cm
+long medirDistancia(int triggerPin, int echoPin) {
+  // Limpa o Trigger
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  // Seta o pino Trigger como HIGH por 10 us
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+
+  // Lê o pino Echo, retorna a duração da onda sonora em microsegundos
+  long duracao = pulseIn(echoPin, HIGH);
+  // Converte a duração para distância (cm)
+  // Velocidade do som (340m/s ou 0.034cm/us). Distância = (duração * velocidade) / 2
+  long distancia = duracao * 0.034 / 2;
+  return distancia;
+}
+
+void loop() {
+  long distEsq = medirDistancia(TRIGGER_ESQ, ECHO_ESQ);
+  long distDir = medirDistancia(TRIGGER_DIR, ECHO_DIR);
+
+  // Ajusta o som do Buzzer (quanto mais perto, mais rápido/agudo)
+  if (distEsq < 100) {
+    int freq = map(distEsq, 0, 100, 2000, 200); // Mapeia 0-100cm para 2000-200Hz
+    tone(BUZZER_ESQ, freq, 100); // Toca a frequência por 100ms
+  } else {
+    noTone(BUZZER_ESQ);
+  }
+
+  // Lógica similar para o lado direito
+}
+          </code>
+        </pre>
+      </div>
+    </section>
+
+
 <section id="simulacao">
   <h2 class="title-simulacao">SIMULAÇÃO DO FUNCIONAMENTO</h2>
 
@@ -107,49 +181,81 @@
     <p>Distância Direita: <span id="dist-dir">--</span> cm</p>
   </div>
 </section>
+    <section id="processo">
+    <h2 class="title-processo">PROCESSO DE DESENVOLVIMENTO</h2>
 
-<script src="simulacao.js"></script>
+    <div class="video-container">
+      <video controls class="video-projeto">
+        <source src="teste_sensor_compacto.mp4" type="video/mp4" />
+         Seu navegador não suporta vídeos.
+      </video>
+    </div>
 
+  <div class="fotos-container">
+    <img src="montagem.png" alt="Montagem do circuito" class="foto-projeto">
+    <img src="prototipação.png" alt="Prototipagem do óculos" class="foto-projeto">
+    <img src="verificacao_codigo.png" alt="Teste do código" class="foto-projeto">
+    <img src="Óculos para Deficientes Visuais _ AV2 Sistemas digitais.png" alt="Código em funcionamento no Tinkercad" class="foto-projeto">
+  </div>
+  </section>
+    <section id="desafios">
+    <h2 class="titlepk">DESAFIOS E LIÇÔES</h2>
+    <div class="maker-container">
+        <p>
+            <h3>Desafio Central: Ajuste e Sensibilidade da Frequência</h3>
+            <br>
+            <h4>O que deu errado?</h4>
+            Inicialmente, a frequência e a cadência do som emitido pelos buzzers eram fixas ou variavam apenas com a distância de forma linear e muito abrupta. Isso resultava em um feedback sonoro pouco informativo e, em distâncias médias, podia ser irritante ou excessivamente rápido/lento, dificultando a interpretação da distância exata pelo usuário. Havia o desafio de encontrar um ponto de equilíbrio onde o som fosse sutil, mas eficaz para a ecolocalização.
+            <br><br>
+            <h4>Como foi resolvido?</h4>
+  
+            Para dar ao usuário a capacidade de personalizar a sensibilidade do feedback sonoro, integramos um Potenciômetro (conectado ao pino analógico A5 no Arduino). 
+            
+            O potenciômetro permite ao usuário ajustar a frequência base do som no código, refinando o tom e a sensibilidade de disparo. O código foi ajustado para que o intervalo de silêncio (pausa) entre os "beeps" ainda fosse diretamente proporcional à distância, mas o tom pode ser personalizado, equilibrando clareza e conforto auditivo. 
+        </p>
+        
+        <br><br>
 
-    <section id="equipe">
+        <p>
+            <h3>Lições Aprendidas</h3>
+            <br>
+            A principal lição foi a importância de dispositivos de controle ajustáveis em projetos assistivos. Em vez de impor uma única configuração fixa, permitir que o usuário ajuste parâmetros críticos (como a frequência do tom de alerta) melhora a usabilidade, o conforto e a eficácia geral do produto, tornando-o verdadeiramente personalizado.
+        </p>
+    </div>
+</section>
+
+  <section id="equipe">
   <h2 class="title-equipe">EQUIPE</h2>
 
   <div class="equipe-container">
 
     <div class="card-membro">
-      <img class="foto-membro" src="eu.jpeg" alt="Foto">
+      <img class="foto-membro" src="eu.jpeg" alt="Foto Lucas Segundo">
       <h3>Lucas Segundo</h3>
       <a class="btn-linkedin" href="https://www.linkedin.com/in/lucas-segundo-44a9a7349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
     </div>
 
     <div class="card-membro">
-      <img class="foto-membro" src="alice.jpeg" alt="Foto">
+      <img class="foto-membro" src="alice.jpeg" alt="Foto Alice Sena">
       <h3>Alice Sena</h3>
       <a class="btn-linkedin" href="https://www.linkedin.com/in/alicessenapereira?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
     </div>
 
     <div class="card-membro">
-      <img class="foto-membro" src="luan.jpeg" alt="Foto">
+      <img class="foto-membro" src="luan.jpeg" alt="Foto Luan Ventura">
       <h3>Luan Ventura</h3>
       <a class="btn-linkedin" href="https://www.linkedin.com/in/luanven?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+      </div>
     </div>
-  </div>
-</section>
-  
+  </section>
   </main>
-  <script>
-document.getElementById("logo-btn").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.querySelector("#canvas-modelagem").scrollIntoView({
-    behavior: "smooth"
-  });
-});
-</script>
+  
+  <footer>
+    <a class="btn-github" href="https://github.com/lucassegundo2/Tyrezia---Site-Sistemas-Digitais" target="_blank">Repositório do Pojeto no GitHub</a>
+    <a href="Tyrezia---Site-Sistemas-Digitais-main.zip" download class="btn-download">💾 Download do Projeto Completo (.zip)</a>
+    <p>&copy; Tyrezia - Projeto Sistemas Digitais/IC - 2025.2</p>
+  </footer>
 
+<script src="simulacao.js"></script>
 </body>
 </html>
-
-
-
-
-
