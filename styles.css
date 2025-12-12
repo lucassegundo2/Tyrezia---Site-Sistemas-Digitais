@@ -633,3 +633,131 @@ footer p {
     font-size: 12px;
   }
 }
+@media (max-width: 768px) {
+
+  header {
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  #menu {
+    padding: 60px 10px;
+  }
+
+  #menu h1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  #menu p {
+    font-size: 16px !important;
+  }
+
+  .hero-content img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .maker-container {
+    padding: 18px;
+    margin: 0 5px;
+  }
+
+  .titlepk {
+    font-size: 32px !important;
+  }
+
+  .equipe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .card-membro {
+    width: 90%;
+    min-width: unset;
+  }
+
+  .foto-membro {
+    width: 90px;
+    height: 90px;
+  }
+
+  .video-container {
+    padding: 0 10px;
+  }
+
+  .video-projeto {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .fotos-container {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  #simulador-area {
+    width: 100%;
+    height: 240px;
+  }
+
+  .sensor {
+    width: 85px;
+    font-size: 13px;
+  }
+
+  #objeto {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  section {
+    scroll-margin-top: 90px !important;
+  }
+
+  #componentes, #aplicativos, #passo-a-passo,
+  #codigo, #video, #licoes {
+    padding: 60px 15px;
+  }
+
+  .content-container {
+    padding: 0 5px;
+  }
+
+  h2, .title-equip, .title-processo, .title-simulacao {
+    font-size: 34px !important;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+
+  .nav-links { display: none; }
+
+  #menu h1 { font-size: 26px !important; }
+  #menu p { font-size: 14px !important; }
+
+  .card-membro { width: 100%; padding: 18px; }
+
+  .video-projeto { border-width: 2px; }
+
+  .sensor {
+    width: 70px;
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+
+
