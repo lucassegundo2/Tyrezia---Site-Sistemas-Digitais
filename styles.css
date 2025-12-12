@@ -91,6 +91,14 @@ header {
   text-shadow: none;
 }
 
+#menu h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--teal);
+  text-shadow: none;
+}
+
+
 #menu p {
   margin-top: 12px;
   font-size: 20px;
@@ -103,8 +111,8 @@ header {
 }
 
 .titlepk {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 800;
   margin-bottom: 25px;
   color: var(--teal);
   text-align: center;
@@ -417,4 +425,131 @@ section {
 .dados-sensores span {
   color: var(--teal);
   font-weight: 700;
+}
+
+#componentes, #aplicativos, #passo-a-passo, #codigo, #video, #licoes {
+  padding: 80px 20px;
+  background: var(--bg2); 
+}
+
+#componentes h2, #aplicativos h2, #passo-a-passo h2, #codigo h2, #video h2, #licoes h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--teal);
+  margin-bottom: 40px;
+}
+
+.content-container {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content-container p, .content-container li {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.content-container h3 {
+  color: var(--teal);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+pre {
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-download {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: var(--teal);
+  color: var(--bg1);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #37d6a5;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  height: 450px;
+  border: none;
+}
+
+.btn-github {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: var(--teal);
+  color: var(--bg1);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.btn-github:hover {
+  background-color: #37d6a5;
+}
+#desafios {
+    padding: 80px 20px;
+    background: var(--bg2);
+}
+
+#desafios h3 {
+    color: var(--teal);
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+#desafios h4 {
+    color: var(--teal);
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+footer {
+    padding: 10px 5px;
+    background: #2d0038;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+
+    margin-top: 50px;
+}
+
+footer p {
+    color: var(--text-muted);
+    font-size: 14px;
+    opacity: 0.8;
 }
